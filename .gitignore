@@ -1,0 +1,4 @@
+machinelearning/__pycache__
+.mypy_cache
+.ipynb_checkpoints
+.DS_Store
