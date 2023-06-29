@@ -1,0 +1,42 @@
+Python GUI to recognize MNIST digits
+
+* Website drawing interface
+* Save drawing as image, modify as needed
+* Run through neural net (I can try with my hardcoded model + tensorflow models and other things)
+
+Accomplished:
+Got basic GUI drawing website
+Trained model using tensorflow and built pipeline that allows us to get predictions from drawn images
+
+To Do:
+Basic Functionality - 
+Put together flask app to allow you to draw images and then have a model give a prediction.
+ This will come with some big UI changes as well
+
+Tuning Up -
+Look into ways to improve the model, mostly in the preprocessing stage. This may go with putting together the flask
+app to have the original image be in a format that will get less distorted (worth investigating how images will be distorted)
+Bring my own handwritten neural net in here to see how it performs.
+The main thing here is so that the model achieves similar performance on these drawn digits as with the training data. I think
+that the main problem comes from the preprocessing of drawn data.
+Also bring in a CNN and maybe even some other models cause why not. The website can then allow you to choose which model to use.
+
+Long Run - 
+First, deploy this website on Heroku
+Second, write a short post about this project
+Maybe do this maybe don't, build in functionality to additionally train model on website (probably not worth it)
+
+Day 2 6/28:
+
+Accomplished:
+Got website working to do predictions on images using model in back end and flask
+Cleaned up website design a little to make this working
+
+To Do:
+* Clean up website design
+* Understand my code better, I used ChatGPT for a bunch, figure out what is going on with the javascript in how
+images are processed and how the result is processed. If I understand this I will be able to make other applications
+that do work on data sent to websites. Also what's going on with flask in general and why render_template isn't working
+* Improve ML code so that it actually works. I feel like the problem here is in the preprocessing of images, maybe center them. Also
+train on adversial examples.
+* Incorporate other ML models into this -> notably my own
