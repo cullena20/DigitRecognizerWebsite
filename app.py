@@ -11,9 +11,6 @@ shared_data = {
 
 @app.route('/')
 def index():
-    model = shared_data['model']
-    print(model)
-    print(shared_data)
     return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
@@ -31,7 +28,7 @@ def image():
         pred = predict.cnn_prediction(image)
         print("CNN pred", pred)
     else:
-        pred = 23
+        pred = -1
     return jsonify(prediction=int(pred))
 
 @app.route('/model', methods=['POST'])
@@ -39,7 +36,6 @@ def model():
     model = request.json.get('selectedValue')
     shared_data['model'] = model
     return jsonify(model=model)
-    # return {'message': 'Model request processed'}
 
 if __name__ == '__main__':
     app.run(port=4000, debug=True)

@@ -11,21 +11,17 @@
 </head>
 <body>
     <header class="container site-header">
-        <h1 style="padding-bottom: 10px"> Handwritten Digit Classifier </h1>
-        <h6><a href="https://github.com/cullena20/RedditSentimentWebsite" target="_blank">Project Github</a></h6>
+        <h1 style="padding-top:20px"> Handwritten Digit Classifier </h1>
+        <h6><a href="https://github.com/cullena20/DigitRecognizerWebsite" target="_blank">Project Github</a></h6>
     </header>
-    <main class="container">
+    <main class="container mt-3">
         <div class="row">
             <div class="col-md-6">
-                <h1>Draw</h1>
+                <h2>Draw</h2>
                 <div class="drawingBoard">
                     <canvas id="drawingBoard" height="400" width="400" style="border:4px solid"></canvas>
                 </div>
                 <div id="toolbar">
-                    <!-- <label for="stroke">Stroke</label>
-                    <input id="stroke" name="stroke" type="color">
-                    <label for="lineWidth">Line Width</label>
-                    <input id="lineWidth" name="lineWidth" type="number" value="5"> -->
                     <button id="clear">Clear</çbutton>
                     <button id="save">Save</button>
                     <button id="predict" value="predict" type="submit">Predict</button>
@@ -33,7 +29,7 @@
             </div>
             <div class="col-md-6">
                 <div class="row modelSelection">
-                    <h1>Model Selection</h1>
+                    <h2>Model Selection</h2>
                     <div class="dropdown">
                         <div class="dropdown-container">
                             <span class="dropdown-label">Model:</span>
@@ -50,16 +46,31 @@
                 </div>
                 <div class="row mt-xl-5">
                     <div class="prediction">
-                        <h1> Prediction</h1>
+                        <h2> Prediction</h2>
                         <h3 id="prediction"></h3>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <h1>Explanation</h1>
+        <div class="row mt-xl-5">
+            <h2>Explanation</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lobortis mattis aliquam faucibus purus in massa tempor nec feugiat. Sed ullamcorper morbi tincidunt ornare massa eget egestas. Et netus et malesuada fames ac turpis egestas integer eget. Sed felis eget velit aliquet sagittis id consectetur purus. Amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Hac habitasse platea dictumst quisque. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Aliquam faucibus purus in massa. Velit dignissim sodales ut eu. Turpis cursus in hac habitasse platea. Felis donec et odio pellentesque diam volutpat commodo sed egestas. Ac tortor dignissim convallis aenean et. Massa tempor nec feugiat nisl pretium fusce id velit ut. Vitae auctor eu augue ut. Dignissim cras tincidunt lobortis feugiat vivamus. Mauris commodo quis imperdiet massa tincidunt nunc. Ullamcorper sit amet risus nullam eget felis eget nunc lobortis.
+
+                Ultrices dui sapien eget mi proin sed. Quis ipsum suspendisse ultrices gravida dictum fusce. Posuere ac ut consequat semper viverra nam libero justo. Sit amet commodo nulla facilisi nullam. Justo laoreet sit amet cursus sit. Eu augue ut lectus arcu bibendum at. Massa ultricies mi quis hendrerit dolor magna eget. Enim sit amet venenatis urna cursus. Integer vitae justo eget magna fermentum iaculis eu. Varius vel pharetra vel turpis nunc. Purus in mollis nunc sed id semper risus. Vitae ultricies leo integer malesuada. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor. Arcu odio ut sem nulla pharetra diam. Cursus vitae congue mauris rhoncus aenean. Massa sapien faucibus et molestie ac feugiat.
+                
+                Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. In metus vulputate eu scelerisque felis imperdiet proin fermentum. Id cursus metus aliquam eleifend mi in nulla posuere. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Mi ipsum faucibus vitae aliquet nec. Condimentum mattis pellentesque id nibh tortor id aliquet. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum. Ut aliquam purus sit amet luctus. Eget nullam non nisi est sit amet. Molestie a iaculis at erat pellentesque.
         </div>
     </main>
+    <address class="container information">
+        <h3> About Me </h3>
+        <p>
+            My name is Cullen Anderson and I am a rising second year Math and CS student at UMass Amherst. Currently I am an intern at University of Utah's Trust And Reproducibility Of Intelligent Computation REU
+            where I am working on robust statistics and ML application under the guidance of professor Jeff Phillips. I am originally from Queens, NY and was a student at Stuyvesant High School.
+        </p>
+        <p> Check out my Github <a href="https://github.com/cullena20" target="_blank" rel="noopener noreferrer"> here</a>! </p>
+        <p> Check out my personal website <a href="http://www.cullenanderson.com/" target="_blank" rel="noopener noreferrer"> here</a>!</p>
+        <p> Email me <a href="mailto:cyanderson@umass.edu" target="_blank" rel="noopener noreferrer"> here</a>!</p>  
+    </address>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
 </body>

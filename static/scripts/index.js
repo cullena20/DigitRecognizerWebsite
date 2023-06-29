@@ -55,16 +55,6 @@ toolbar.addEventListener("click", e => {
     }
 });
 
-toolbar.addEventListener("change", e => {
-    if(e.target.id === "stroke") {
-        ctx.strokeStyle = e.target.value;
-    }
-
-    if(e.target.id === "lineWidth") {
-        lineWidth = e.target.value;
-    }
-});
-
 const draw = e => {
     if(!isPainting) {
         return;
