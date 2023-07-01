@@ -7,6 +7,15 @@ def base64_to_PIL(b64):
     image = Image.open(io.BytesIO(base64.b64decode(b64))).convert("L")
     return image
 
+def PIL_to_base64(image):
+    pil = Image.fromarray(image[0] * 255)
+    pil = pil.resize((100,100))
+    pil = pil.convert('RGB')
+    buffered = io.BytesIO()
+    pil.save(buffered, format="JPEG")
+    img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
+    return img_str
+
 def show_image(image):
     image.show()
 

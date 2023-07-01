@@ -47,6 +47,7 @@ toolbar.addEventListener("click", e => {
             // Handle the response from the server
             console.log(result);
             document.getElementById('prediction').textContent = result.prediction;
+            document.getElementById('processed_image').src = `data:image/jpeg;base64, ${result.image}`
         })
         .catch(error => {
             // Handle any errors that occur during the request
@@ -63,7 +64,8 @@ const draw = e => {
     ctx.lineWidth = lineWidth;
     ctx.lineCap = "round";
 
-    ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+    var BB=canvas.getBoundingClientRect();
+    ctx.lineTo(e.clientX - BB.left, e.clientY - BB.top);
     ctx.stroke();
 }
 
@@ -79,7 +81,7 @@ canvas.addEventListener("mouseup", e => {
     ctx.beginPath();
 });
 
-canvas.addEventListener("mousemove", draw);2
+canvas.addEventListener("mousemove", draw);
 
 const dropdown = document.getElementById('model-dropdown');
 const defaultSelectedValue = dropdown.value;
@@ -115,11 +117,9 @@ function sendDropdownValue(selectedValue) {
             dropout layer (dropout 0.25), convolutional layer (64 kernels of size (3, 3)), max pooling layer (pool size (2, 2)), 
             dropout layer (dropout 0.25), flatten and dense layer (128 units), dropout layer, output layer (10 output units).`}
     })
-    .then(data => {
-        // Handle the response from the server if needed
-    })
     .catch(error => {
         // Handle any errors that occur during the request
+            console.error('Error:', error);
     });
 }
 
