@@ -2,7 +2,6 @@ from flask import Flask, request, render_template, jsonify
 from machinelearning import processing, predict
 import numpy as np
 
-
 app = Flask(__name__)
 
 shared_data = {
@@ -57,4 +56,4 @@ def model():
     return jsonify(model=model)
 
 if __name__ == '__main__':
-    app.run(port=4000, debug=True)
+    app.run()

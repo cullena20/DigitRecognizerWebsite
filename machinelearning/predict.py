@@ -1,6 +1,7 @@
 import keras
 import os
 import pickle
+# this is needed when predict is imported, but breaks when this file is run directly
 from machinelearning import mynet
 
 
@@ -29,7 +30,3 @@ def mynn_prediction(image):
     image = image.reshape(784, 1)
     pred = my_nn.feedforward(image)
     return pred
-
-if __name__ == "__main__":
-    my_nn = setup_my_nn()
-    print(my_nn.sizes)
