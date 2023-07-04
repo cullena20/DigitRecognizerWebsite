@@ -74,8 +74,14 @@
             <p>
                 I used the MNIST training set to train these models. The MNIST dataset consists of 70,000 handwritten digits and was created in 1994.
                 I built trained 3 models on this dataset, using 60,000 training images and 10,000 testing images. The CNN achieves 99.2% test accuracy,
-                the Tensorflow Neural Network achieves 97.7% test accuracy, and my neural network achieves 95% test accuracy. Click different models for
-                more architectural details.
+                the Tensorflow Neural Network achieves 97.7% test accuracy, and my neural network achieves 93.7% test accuracy. I built my neural
+                network from scratch using numpy with the assistance of Michael Nielson's great book, <a href="http://neuralnetworksanddeeplearning.com/">
+                Neural Networks and Deep Learning</a>. Click different models for more architectural details.
+            </p>
+            <p>
+                It should be noted that all the models do not perform as well on digits drawn in this website as they do on testing data. This is a result
+                of the preprocessing step. To address this, models may be further trained on data gathered through this kind of preprocessing. My neural 
+                network appears to suffer the most from this, while the others are able to generalize better.
             </p>
             <h2>Preprocessing</h2>
             <p>

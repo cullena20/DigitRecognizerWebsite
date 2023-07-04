@@ -2,6 +2,7 @@ from flask import Flask, request, render_template, jsonify
 from machinelearning import processing, predict
 import numpy as np
 
+
 app = Flask(__name__)
 
 shared_data = {
@@ -36,8 +37,8 @@ def predict_image():
         pred = predict.tfnn_prediction(image)
     elif model == "CNN":
         pred = predict.cnn_prediction(image)
-    else:
-        pred = -1
+    elif model == "MY_NN":
+        pred = predict.mynn_prediction(image)
     return jsonify(prediction=int(np.argmax(pred)), image=process_image_data)
 
 @app.route('/model', methods=['POST'])

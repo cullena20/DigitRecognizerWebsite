@@ -110,7 +110,9 @@ function sendDropdownValue(selectedValue) {
             achieves 97.7% test accuracy. It has an input layer of size 784, a hidden layer of size 128,
             and an output layer of size 10.`}
         else if (result.model == "MY_NN"){
-            document.getElementById('description').textContent = "B"}
+            document.getElementById('description').textContent =    `MY NN is a simple Neural Network built using only Numpy 
+            that achieves 93.8% test accuracy. It has an input layer of size 783, a hidden layer of size 30, and an output
+            layer of size 10.`}
         else if (result.model == "CNN"){
             document.getElementById('description').textContent = `CNN is a Convolutional Neural Network trained in Tensorflow that achieves a 99.2% test accuracy.
             It's architecture is as follows: input layer of size (28, 28, 1), convolutional layer (32 kernels of size (3, 3)), max pooling layer (pool size (2, 2)), 
